@@ -1,0 +1,120 @@
+# Hexo 配置
+## 文档: https://hexo.io/docs/configuration.html
+## 来源: https://github.com/hexojs/hexo/
+
+# 网站
+title: 吟风博客
+subtitle: '且闻细水轻吟，一袖任风凭'
+description: '视我斑驳，享我清秋'
+keywords: 吟风,春山,非谷,博客,bencky,无殇,冬囚夏蝉,我栖春山
+author: 非谷  # 作者名称，用于显示在作者卡片和文章结尾的信息中
+language: zh-CN # 默认en 可以从主题themes/xxxxxx/languages/ 查看对应的语言
+timezone: 'Asia/Shanghai' # 时区
+
+# URL
+## 在此处设置您的网站url。例如，如果您使用GitHub页面，请将url设置为'https://username.github.io/project'
+url: http://bencky1017.github.io/blog
+root: /blog/
+permalink: posts/:abbrlink/  # /:abbrlink/ 默认 :year/:month/:day/:title/ 
+abbrlink:
+    alg: crc16   #算法：crc16(默认) 和 crc32
+    rep: dec     #进制：dec(十进制，默认) 和 hex
+permalink_defaults:
+pretty_urls:
+  trailing_index: false # 设置为 false 可从永久链接中删除尾随的“index.html”
+  trailing_html: false # 设置为 false 可从永久链接中删除尾随的“.html”
+
+# 目录
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# 写作
+new_post_name: :title.md # 新章节名称
+default_layout: post
+titlecase: false # 将标题转换为标题框
+external_link:
+  enable: true # 在新选项卡中打开外部链接
+  field: site # 适用于整个网站
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# 主页设置
+# path: 博客index页的路径. (默认 = '')
+# per_page: 每页显示的文章. (0 = 禁用分页)
+# order_by: 文章顺序. (默认按日期降序排序)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# 类别&标签
+default_category: 未分类 # 默认无分类 uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# 日期 / 时间格式
+## Hexo 使用 Moment.js 解析和显示日期
+## 你可以自定义日期格式，如其中定义的
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## 更新的选项支持 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# 页码
+## 将 per_page 设置为 0 可禁用分页
+per_page: 10
+pagination_dir: page
+
+# 包含 / 排除文件
+## 包含:/排除: 选项仅适用于 'source/' 文件夹
+include:
+exclude:
+ignore:
+
+# 扩展
+## 插件: https://hexo.io/plugins/
+## 主题: https://hexo.io/themes/
+theme: butterfly
+# theme: landscape
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repo: https://github.com/bencky1017/blog
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: main
+  message: ✒️网站更新于：{{ now('yyyy-MM-dd HH:mm:ss') }}
+
+# 搜索系统
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html

@@ -5,6 +5,6 @@ updated: {{ date }}
 reward: 
 description: 
 top_img: 
-comments: false
+comments: 
 abbrlink: 
 ---

@@ -2,7 +2,7 @@
 title: 友情链接
 date: 2024-06-20 22:34:12
 type: "link"
-random: true
+random: false
 ---
 
 ***
